@@ -1,0 +1,81 @@
+@import 'common/colors.sass'
+
+$primary-color: $fg2;
+
+html
+  font-size: 100%
+  box-sizing: border-box;
+
+*, *:before, *:after
+  box-sizing: inherit;
+
+html,
+body
+  font-smoothing: antialiased;
+
+h1
+  font-family: 'Dancing Script', cursive
+
+a
+  color: $fg2
+
+#root
+  background-color: $bg1
+
+.headroom--pinned
+  z-index: 1000 !important
+
+.navbar
+  margin-bottom: 0
+  z-index: 1000 !important
+  position: relative
+  .container
+    justify-content: space-between
+
+.navbar-brand
+  padding: 15px
+  margin: 0px
+  font-size: 18px
+  line-height: 20px
+  height: 50px
+
+.nav.navbar-nav
+  display: flex
+  flex-flow: row wrap
+  & > li
+    flex-grow: 1
+    margin: 0 .5em
+    .menu-item
+      padding: 0.5rem 1rem
+      text-align: center
+      z-index: 10
+      &:hover, &:active, &:focus, &.active
+        background-color: $bg2
+        text-decoration: none
+        outline: none
+
+.nav-tabs a
+  &:hover, &:active, &:focus, &.active
+    text-decoration: none
+    outline: none
+
+.viewport
+  position: relative
+  background-color: $bg2
+  box-shadow: 0 0 2em $bg2
+  z-index: 1
+  padding-bottom: 4em
+  border-bottom-right-radius: 2em
+  border-bottom-left-radius: 2em
+
+.list-group-item-text
+  overflow: hidden
+
+.footer
+  position: relative
+  z-index: 0
+  background-color: $bg1
+  color: $fg2
+  a
+    color: inherit
+    font-weight: bold

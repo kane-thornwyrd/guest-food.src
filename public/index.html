@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#FF5555">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html { 
+        background-color: #DBDBDB;
+        font-family: 'Dancing Script', cursive;
+        padding: 0;
+        margin: 0;
+      }
+
+      #root {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+      }
+
+      .body-loading {
+        color: #3F496E;
+        max-width: 960px;
+        background-color: #fff;
+        padding: 2em;
+        margin: auto;
+        box-shadow: 0 0 1em #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-bottom-right-radius: 2em; 
+        border-bottom-left-radius: 2em;
+      }
+
+      .body-loading > * {
+        margin: 1em auto;
+      }
+
+      .heart {
+        position: relative;
+      }
+
+      .heart,
+      .heart:before,
+      .heart:after {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: #FF5555;
+        transform: rotateZ(45deg);
+      }
+
+      .heart:before,
+      .heart:after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .heart:before {
+        transform: translateX(-50%);
+        animation: animX 3s infinite 0.75s;
+      }
+
+      .heart:after {
+        transform: translateY(-50%);
+        animation: animY 3s infinite;
+      }
+
+      @-moz-keyframes animX {
+        0%, 25% {
+          transform: translateX(-50%);
+        }
+
+        50%, 75% {
+          transform: translateX(50%);
+        }
+      }
+
+      @-webkit-keyframes animX {
+        0%, 25% {
+          transform: translateX(-50%);
+        }
+
+        50%, 75% {
+          transform: translateX(50%);
+        }
+      }
+
+      @-o-keyframes animX {
+        0%, 25% {
+          transform: translateX(-50%);
+        }
+
+        50%, 75% {
+          transform: translateX(50%);
+        }
+      }
+
+      @keyframes animX {
+        0%, 25% {
+          transform: translateX(-50%);
+        }
+
+        50%, 75% {
+          transform: translateX(50%);
+        }
+      }
+
+      @-moz-keyframes animY {
+        0%, 25% {
+          transform: translateY(-50%);
+        }
+
+        50%, 75% {
+          transform: translateY(50%);
+        }
+      }
+
+      @-webkit-keyframes animY {
+        0%, 25% {
+          transform: translateY(-50%);
+        }
+
+        50%, 75% {
+          transform: translateY(50%);
+        }
+      }
+
+      @-o-keyframes animY {
+        0%, 25% {
+          transform: translateY(-50%);
+        }
+
+        50%, 75% {
+          transform: translateY(50%);
+        }
+      }
+
+      @keyframes animY {
+        0%, 25% {
+          transform: translateY(-50%);
+        }
+
+        50%, 75% {
+          transform: translateY(50%);
+        }
+      }
+
+    </style>
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <!-- HTTP 1.1 -->
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <!-- HTTP 1.0 -->
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <!-- Prevents caching at the Proxy Server -->
+    <meta http-equiv="Expires" content="0"/>
+
+    <title>Guest Food</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="body-loading">
+        <h1 class="heart"></h1>
+        <h1>Guest Food</h1>
+      </div>
+    </div>
+  </body>
+</html>
